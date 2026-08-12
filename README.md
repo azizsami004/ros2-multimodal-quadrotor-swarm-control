@@ -1,102 +1,218 @@
 # ROS 2 Multimodal Quadrotor Control & TurtleBot3 Leader-Follower
 
-A ROS 2 Humble project for controlling an X3 quadrotor in Ignition Gazebo using a **PyQt6 manual interface** and **offline voice commands**, while displaying real-time telemetry. The project also implements the bonus **TurtleBot3 Burger leader-follower system using TF2**.
-
-## Features
-
-### Quadrotor Control
-
-* Manual control using a PyQt6 GUI
-* Forward / backward movement
-* Left / right yaw rotation
-* Up / down movement
-* Stop command
-* Button and Voice mode switching
-
-### Voice Control
-
-* Real-time microphone input using `sounddevice`
-* Offline speech recognition using Vosk
-* Supported commands:
-
-  * `forward`
-  * `backward`
-  * `left`
-  * `right`
-  * `up`
-  * `down`
-  * `stop`
-* Voice recognition runs separately from the PyQt6 GUI to prevent the interface from freezing
-
-### Telemetry Dashboard
-
-Real-time display of:
-
-* Position: X, Y, Z
-* Orientation
-* Linear velocity
-* Angular velocity
-* Odometry connection status
-
-### Bonus: TurtleBot3 Leader-Follower
-
-* TurtleBot3 Burger spawned in the same Gazebo world as the X3 quadrotor
-* Separate TurtleBot command and odometry topics
-* TF2-based tracking between the quadrotor and TurtleBot3
-* TurtleBot automatically turns toward and follows the quadrotor
-* Maintains a minimum following distance
+A ROS 2 Humble project that controls an **X3 quadrotor in Ignition Gazebo** using a PyQt6 manual interface and offline voice commands, displays real-time telemetry, and implements a **TurtleBot3 Burger leader-follower system using TF2**.
 
 ---
 
-## System Architecture
+## 🔗 Project Links
 
-```text
-                     ┌───────────────────────┐
-                     │   command_sender_ui   │
-                     │                       │
-                     │  PyQt6 Manual Control │
-                     │  + Voice Mode         │
-                     └───────────┬───────────┘
-                                 │
-                         /command_sender
-                                 │
-                                 ▼
-                     ┌───────────────────────┐
-                     │      controller       │
-                     └───────────┬───────────┘
-                                 │
-                           /X3/cmd_vel
-                                 │
-                                 ▼
-                         ┌──────────────┐
-                         │ X3 Quadrotor │
-                         │   Gazebo     │
-                         └──────┬───────┘
-                                │
-                      /model/X3/odometry
-                         ┌──────┴───────┐
-                         │              │
-                         ▼              ▼
-                    odom_gui      tf_broadcaster
-                                       │
-                                       │ TF2
-                                       ▼
-                              turtlebot_follower
-                                       │
-                                  /tb3/cmd_vel
-                                       │
-                                       ▼
-                               TurtleBot3 Burger
+### GitHub Repository
+https://github.com/azizsami004/ros2-multimodal-quadrotor-swarm-control
+
+### Docker Hub
+https://hub.docker.com/r/azizsami004/ros2-multimodal-quadrotor-swarm-control
+
+### Docker Image
+
+```bash
+docker pull azizsami004/ros2-multimodal-quadrotor-swarm-control:latest
 ```
 
 ---
 
-## Package Structure
+# Features
+
+## 🚁 Quadrotor Control
+
+The X3 quadrotor can be controlled through a PyQt6 GUI.
+
+Available commands:
+
+- Forward
+- Backward
+- Left
+- Right
+- Up
+- Down
+- Stop
+
+The interface supports two control modes:
+
+- **BUTTON mode**
+- **VOICE mode**
+
+---
+
+## 🎙️ Offline Voice Control
+
+Voice commands are processed locally using **Vosk** and `sounddevice`.
+
+Supported commands:
+
+```text
+forward
+backward
+left
+right
+up
+down
+stop
+```
+
+The speech-recognition system works offline and does not require an internet connection during operation.
+
+Voice processing runs separately from the GUI so that microphone processing does not freeze the PyQt interface.
+
+---
+
+## 📊 Real-Time Telemetry Dashboard
+
+A separate PyQt6 telemetry interface displays real-time quadrotor data.
+
+Displayed information includes:
+
+- Position X
+- Position Y
+- Position Z
+- Orientation
+- Linear velocity
+- Angular velocity
+- Odometry / system status
+
+The telemetry node subscribes to:
+
+```text
+/model/X3/odometry
+```
+
+using:
+
+```text
+nav_msgs/msg/Odometry
+```
+
+---
+
+# 🤖 TurtleBot3 Leader-Follower System
+
+The bonus portion of the project adds a **TurtleBot3 Burger** to the same Gazebo environment.
+
+The TurtleBot automatically follows the X3 quadrotor using **ROS 2 TF2**.
+
+The follower calculates:
+
+```text
+Relative X position
+Relative Y position
+Horizontal distance
+Heading angle
+```
+
+It then generates linear and angular velocity commands for the TurtleBot.
+
+Commands are published to:
+
+```text
+/tb3/cmd_vel
+```
+
+The follower:
+
+1. Determines the drone position using TF2.
+2. Rotates toward the drone when necessary.
+3. Moves toward the drone.
+4. Corrects its heading while moving.
+5. Stops after reaching the required following distance.
+
+---
+
+# System Architecture
+
+```text
+                ┌───────────────────────┐
+                │   command_sender_ui   │
+                │                       │
+                │ Manual + Voice Input  │
+                └───────────┬───────────┘
+                            │
+                    /command_sender
+                            │
+                            ▼
+                ┌───────────────────────┐
+                │      controller       │
+                └───────────┬───────────┘
+                            │
+                      /X3/cmd_vel
+                            │
+                            ▼
+                    ┌──────────────┐
+                    │ X3 Quadrotor │
+                    │    Gazebo    │
+                    └──────┬───────┘
+                           │
+                 /model/X3/odometry
+                    ┌──────┴──────┐
+                    │             │
+                    ▼             ▼
+                odom_gui    tf_broadcaster
+                                  │
+                                  │ TF2
+                                  ▼
+                         turtlebot_follower
+                                  │
+                            /tb3/cmd_vel
+                                  │
+                                  ▼
+                          TurtleBot3 Burger
+```
+
+---
+
+# TF2 Architecture
+
+The project creates a common TF structure for the quadrotor and TurtleBot.
+
+```text
+                 world
+                /     \
+           X3/odom    tb3/odom
+              |           |
+              |           |
+       X3/base_link  tb3/base_footprint
+```
+
+The follower queries the transform:
+
+```text
+tb3/base_footprint → X3/base_link
+```
+
+This provides the position of the drone relative to TurtleBot3.
+
+The follower calculates:
+
+```python
+distance = sqrt(x² + y²)
+
+heading = atan2(y, x)
+```
+
+and generates the required TurtleBot velocity commands.
+
+---
+
+# Package Structure
 
 ```text
 task_1_ws/
+│
+├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
+│
 └── src/
     └── task1_quadrotor/
+        │
         ├── launch/
         │   ├── gazebo.launch.py
         │   ├── bridge.launch.py
@@ -127,9 +243,9 @@ task_1_ws/
 
 ---
 
-## Node Description
+# Node Description
 
-### `controller.py`
+## `controller.py`
 
 Receives velocity commands from:
 
@@ -137,25 +253,25 @@ Receives velocity commands from:
 /command_sender
 ```
 
-and publishes them to:
+and publishes the processed commands to:
 
 ```text
 /X3/cmd_vel
 ```
 
-The node acts as the interface between the user-control system and the quadrotor.
+This acts as the main control interface between manual/voice input and the quadrotor.
 
 ---
 
-### `command_sender_ui.py`
+## `command_sender_ui.py`
 
-PyQt6-based control interface.
+Provides the PyQt6 user interface.
 
-It contains two modes:
+The interface contains:
 
-#### Button Mode
+### BUTTON Mode
 
-Provides buttons for:
+Manual controls for:
 
 ```text
 Forward
@@ -167,43 +283,39 @@ Down
 Stop
 ```
 
-#### Voice Mode
+### VOICE Mode
 
-Provides microphone ON/OFF control and receives recognized commands from `VoiceController`.
+Provides microphone ON/OFF control and receives recognized commands from the voice-control system.
 
-Both manual and voice commands use the same command publishing system.
+Both modes use the same ROS 2 command pipeline.
 
 ---
 
-### `voice_controller.py`
+## `voice_controller.py`
 
-Handles the speech-recognition system.
-
-Pipeline:
+Handles microphone input and speech recognition.
 
 ```text
 Microphone
-    ↓
+     ↓
 sounddevice
-    ↓
+     ↓
 Audio Queue
-    ↓
+     ↓
 Vosk
-    ↓
+     ↓
 Recognized Text
-    ↓
-Command Extraction
-    ↓
+     ↓
+Command Detection
+     ↓
 PyQt Signal
-    ↓
+     ↓
 command_sender_ui
 ```
 
-Vosk allows the voice-control system to work offline without requiring an internet connection.
-
 ---
 
-### `odom_gui.py`
+## `odom_gui.py`
 
 Subscribes to:
 
@@ -211,93 +323,67 @@ Subscribes to:
 /model/X3/odometry
 ```
 
-using:
+and displays live telemetry including:
 
 ```text
-nav_msgs/msg/Odometry
+Position
+Orientation
+Linear velocity
+Angular velocity
+System status
 ```
-
-It displays the quadrotor's real-time telemetry including position, orientation, linear velocity, and angular velocity.
 
 ---
 
-### `tf_broadcaster.py`
+## `tf_broadcaster.py`
 
-Creates the TF relationship between the quadrotor and TurtleBot3.
+Creates the TF2 relationships required for the leader-follower system.
 
-The TF tree is approximately:
-
-```text
-                world
-               /     \
-          X3/odom    tb3/odom
-             |           |
-             |           |
-      X3/base_link  tb3/base_footprint
-```
-
-The quadrotor transform is generated from:
+It receives:
 
 ```text
 /model/X3/odometry
 ```
 
-and the TurtleBot transform is generated from:
+and:
 
 ```text
 /tb3/odom
 ```
 
+and publishes the required dynamic and static transforms.
+
 ---
 
-### `turtlebot_follower.py`
+## `turtlebot_follower.py`
 
-Uses a TF2 `Buffer` and `TransformListener` to determine the position of the quadrotor relative to TurtleBot3.
+Uses:
 
-It calculates:
-
-```text
-Horizontal distance to quadrotor
-Heading angle to quadrotor
+```python
+tf2_ros.Buffer
 ```
 
-The TurtleBot then:
+and:
 
-1. Rotates toward the quadrotor if the heading error is large.
-2. Moves toward the quadrotor.
-3. Corrects its heading while moving.
-4. Stops when it reaches the desired following distance.
+```python
+tf2_ros.TransformListener
+```
 
-Commands are published to:
+to determine the position of the quadrotor relative to TurtleBot3.
+
+The calculated distance and heading are used to publish:
 
 ```text
 /tb3/cmd_vel
 ```
 
----
-
-## Gazebo World
-
-The project uses:
-
-```text
-worlds/task1_world.sdf
-```
-
-The world contains:
-
-* X3 quadrotor
-* Large ground plane
-* TurtleBot3 Burger
-* Required Gazebo systems and plugins
-
-The ground plane was enlarged to provide sufficient space for TurtleBot3 leader-follower movement.
+and automatically follow the quadrotor.
 
 ---
 
-## ROS 2 / Gazebo Topics
+# ROS 2 Topics
 
-### Quadrotor
+## Quadrotor
 
 ```text
 /command_sender
@@ -305,7 +391,7 @@ The ground plane was enlarged to provide sufficient space for TurtleBot3 leader-
 /model/X3/odometry
 ```
 
-### TurtleBot3
+## TurtleBot3
 
 ```text
 /tb3/cmd_vel
@@ -315,27 +401,51 @@ The ground plane was enlarged to provide sufficient space for TurtleBot3 leader-
 
 ---
 
-## ROS-Gazebo Bridge
+# ROS-Gazebo Bridge
 
-The project uses `ros_gz_bridge` to communicate between ROS 2 and Ignition Gazebo.
+`ros_gz_bridge` is used for communication between ROS 2 and Ignition Gazebo.
 
-The main bridges are:
+Main bridges:
 
 ```text
 ROS 2 → Gazebo
+
 /X3/cmd_vel
 /tb3/cmd_vel
+```
 
+```text
 Gazebo → ROS 2
+
 /model/X3/odometry
 /tb3/odom
 ```
 
 ---
 
-## Requirements
+# Gazebo World
 
-Tested with:
+The simulation world is located at:
+
+```text
+worlds/task1_world.sdf
+```
+
+The environment contains:
+
+- X3 quadrotor
+- TurtleBot3 Burger
+- Ground plane
+- Gazebo velocity-control systems
+- Odometry systems
+
+The ground plane was enlarged to provide enough space for the TurtleBot leader-follower demonstration.
+
+---
+
+# Requirements
+
+The project was developed using:
 
 ```text
 Ubuntu 22.04
@@ -345,38 +455,25 @@ Python 3
 PyQt6
 Vosk
 sounddevice
+TF2
 ros_gz_bridge
 ros_gz_sim
-tf2_ros
-```
-
-Install the main ROS dependencies:
-
-```bash
-sudo apt update
-
-sudo apt install \
-    ros-humble-ros-gz-bridge \
-    ros-humble-ros-gz-sim \
-    ros-humble-tf2-ros \
-    python3-pyqt6 \
-    portaudio19-dev
-```
-
-Install the Python voice-control libraries:
-
-```bash
-python3 -m pip install --user vosk sounddevice
 ```
 
 ---
 
-## Building the Workspace
+# Running From Source
 
-Clone the repository and enter the workspace:
+Clone the repository:
 
 ```bash
-cd task_1_ws
+git clone https://github.com/azizsami004/ros2-multimodal-quadrotor-swarm-control.git
+```
+
+Enter the workspace:
+
+```bash
+cd ros2-multimodal-quadrotor-swarm-control
 ```
 
 Source ROS 2:
@@ -397,24 +494,85 @@ Source the workspace:
 source install/setup.bash
 ```
 
----
-
-## Running the Complete Project
-
-The entire system can be started using:
+Run the complete project:
 
 ```bash
 ros2 launch task1_quadrotor task1.launch.py
 ```
 
-This launches:
+---
+
+# 🐳 Docker
+
+A Docker image containing the ROS 2 workspace and its dependencies is available on Docker Hub.
+
+## Docker Hub Repository
+
+https://hub.docker.com/r/azizsami004/ros2-multimodal-quadrotor-swarm-control
+
+## Pull Docker Image
+
+```bash
+sudo docker pull \
+azizsami004/ros2-multimodal-quadrotor-swarm-control:latest
+```
+
+---
+
+# Running With Docker Compose
+
+Because the application uses:
+
+- Gazebo GUI
+- PyQt6 GUI
+- Microphone input
+- X11 display
+
+the included `docker-compose.yml` provides the necessary host configuration.
+
+First allow the Docker container to access the X11 display:
+
+```bash
+xhost +si:localuser:root
+```
+
+Build and run directly from the repository:
+
+```bash
+sudo docker compose build
+sudo docker compose up
+```
+
+To stop the project:
+
+```bash
+Ctrl+C
+```
+
+then:
+
+```bash
+sudo docker compose down
+```
+
+---
+
+# Complete Launch
+
+Only one ROS 2 launch command is required:
+
+```bash
+ros2 launch task1_quadrotor task1.launch.py
+```
+
+The launch hierarchy is:
 
 ```text
 task1.launch.py
 │
 ├── gazebo.launch.py
 │   ├── Ignition Gazebo
-│   ├── X3 quadrotor
+│   ├── X3 Quadrotor
 │   └── TurtleBot3 Burger
 │
 ├── bridge.launch.py
@@ -433,176 +591,49 @@ task1.launch.py
 
 ---
 
-## Manual Control
-
-Launch the project and select:
-
-```text
-BUTTON
-```
-
-from the control GUI.
-
-The available controls are:
-
-```text
-Forward    → Move quadrotor forward
-Backward   → Move quadrotor backward
-Left       → Rotate left
-Right      → Rotate right
-Up         → Increase altitude
-Down       → Decrease altitude
-Stop       → Stop movement
-```
-
----
-
-## Voice Control
-
-Select:
-
-```text
-VOICE
-```
-
-and enable the microphone.
-
-Supported commands:
-
-```text
-forward
-backward
-left
-right
-up
-down
-stop
-```
-
-Example:
-
-```text
-User: "forward"
-
-Microphone
-    ↓
-Vosk recognizes "forward"
-    ↓
-GUI processes command
-    ↓
-/command_sender
-    ↓
-controller.py
-    ↓
-/X3/cmd_vel
-    ↓
-Quadrotor moves forward
-```
-
----
-
-## TurtleBot3 Leader-Follower
-
-The TurtleBot automatically follows the quadrotor using TF2.
-
-The follower queries:
-
-```text
-tb3/base_footprint → X3/base_link
-```
-
-and calculates the relative horizontal position of the drone.
-
-The controller uses:
-
-```text
-distance = sqrt(x² + y²)
-heading  = atan2(y, x)
-```
-
-to determine the required linear and angular velocity.
-
-The current implementation uses a proportional follower controller with limited linear and angular speeds for stable movement.
-
----
-
-## Testing Individual Components
-
-### Quadrotor velocity
-
-```bash
-ros2 topic echo /X3/cmd_vel
-```
-
-### Quadrotor odometry
-
-```bash
-ros2 topic echo /model/X3/odometry
-```
-
-### TurtleBot velocity
-
-```bash
-ros2 topic echo /tb3/cmd_vel
-```
-
-### TurtleBot odometry
-
-```bash
-ros2 topic echo /tb3/odom
-```
-
-### Check TF relationship
-
-```bash
-ros2 run tf2_ros tf2_echo \
-    tb3/base_footprint \
-    X3/base_link
-```
-
----
-
-## Control Flow
-
-### Manual Mode
+# Manual Control Flow
 
 ```text
 PyQt Button
-    ↓
+     ↓
 command_sender_ui
-    ↓
+     ↓
 /command_sender
-    ↓
+     ↓
 controller
-    ↓
+     ↓
 /X3/cmd_vel
-    ↓
-X3
+     ↓
+X3 Quadrotor
 ```
 
-### Voice Mode
+---
+
+# Voice Control Flow
 
 ```text
 Microphone
-    ↓
+     ↓
 VoiceController
-    ↓
+     ↓
 Vosk
-    ↓
+     ↓
 Recognized Command
-    ↓
+     ↓
 command_sender_ui
-    ↓
+     ↓
 /command_sender
-    ↓
+     ↓
 controller
-    ↓
+     ↓
 /X3/cmd_vel
-    ↓
-X3
+     ↓
+X3 Quadrotor
 ```
 
-### Leader-Follower
+---
+
+# Leader-Follower Flow
 
 ```text
 X3 Odometry ──────┐
@@ -611,32 +642,84 @@ TB3 Odometry ─────┤
                   ▼
             TF Broadcaster
                   ↓
-                TF2
+                 TF2
                   ↓
          TurtleBot Follower
                   ↓
            /tb3/cmd_vel
                   ↓
-           TurtleBot3 Burger
+          TurtleBot3 Burger
 ```
 
 ---
 
-## Future Improvements
+# Testing
 
-Possible improvements include:
+## Check Quadrotor Odometry
 
-* Maintaining a fixed target point directly behind the quadrotor
-* Configurable follower distance
-* Better PID-based follower controller
-* Obstacle avoidance
-* Combined control and telemetry dashboard
-* Improved voice-recognition feedback
-* Additional safety and command timeout handling
+```bash
+ros2 topic echo /model/X3/odometry
+```
+
+## Check TurtleBot Odometry
+
+```bash
+ros2 topic echo /tb3/odom
+```
+
+## Check Quadrotor Commands
+
+```bash
+ros2 topic echo /X3/cmd_vel
+```
+
+## Check TurtleBot Commands
+
+```bash
+ros2 topic echo /tb3/cmd_vel
+```
+
+## Check TF2
+
+```bash
+ros2 run tf2_ros tf2_echo \
+tb3/base_footprint \
+X3/base_link
+```
+
+A valid continuously updating transform confirms that TF2 can determine the position of the quadrotor relative to TurtleBot3.
 
 ---
 
-## Author
+# Future Improvements
 
-Developed as part of the **BUET Mars Rover Team – Interplanetar 2026 Recruitment Assignment, Task 1**.
+Possible improvements include:
 
+- Maintaining a fixed target point directly behind the quadrotor
+- Configurable following distance
+- PID-based follower controller
+- Obstacle avoidance
+- Integrated telemetry and control dashboard
+- Improved voice feedback
+- Additional failsafe mechanisms
+- Navigation integration
+
+---
+
+# Author
+
+**Abdul Aziz**
+
+Developed for the **BUET Mars Rover Team – Interplanetar 2026 Recruitment Software Assignment, Task 1**.
+
+---
+
+# Docker Hub
+
+🐳 **Pre-built Docker image:**
+
+https://hub.docker.com/r/azizsami004/ros2-multimodal-quadrotor-swarm-control
+
+```bash
+docker pull azizsami004/ros2-multimodal-quadrotor-swarm-control:latest
+```
