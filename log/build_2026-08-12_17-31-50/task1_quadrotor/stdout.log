@@ -1,0 +1,81 @@
+running develop
+Removing /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1-quadrotor.egg-link (link to .)
+running egg_info
+writing ../../build/task1_quadrotor/task1_quadrotor.egg-info/PKG-INFO
+writing dependency_links to ../../build/task1_quadrotor/task1_quadrotor.egg-info/dependency_links.txt
+writing entry points to ../../build/task1_quadrotor/task1_quadrotor.egg-info/entry_points.txt
+writing requirements to ../../build/task1_quadrotor/task1_quadrotor.egg-info/requires.txt
+writing top-level names to ../../build/task1_quadrotor/task1_quadrotor.egg-info/top_level.txt
+reading manifest file '../../build/task1_quadrotor/task1_quadrotor.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/task1_quadrotor/task1_quadrotor.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/odom_gui.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/controller.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/command_sender_ui.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/__init__.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/voice_controller.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/odom_gui.py to odom_gui.cpython-310.pyc
+byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/controller.py to controller.cpython-310.pyc
+byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/command_sender_ui.py to command_sender_ui.cpython-310.pyc
+byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/voice_controller.py to voice_controller.cpython-310.pyc
+running install_data
+copying resource/task1_quadrotor -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/ament_index/resource_index/packages
+copying package.xml -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor
+copying launch/gazebo.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+copying launch/task1.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+copying launch/control.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+copying launch/bridge.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+copying worlds/task1_world.sdf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/worlds
+copying models/vosk-model-small-en-us-0.15/README -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15
+copying models/vosk-model-small-en-us-0.15/conf/model.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf
+copying models/vosk-model-small-en-us-0.15/conf/mfcc.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf
+copying models/vosk-model-small-en-us-0.15/am/final.mdl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/am
+copying models/vosk-model-small-en-us-0.15/ivector/splice.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+copying models/vosk-model-small-en-us-0.15/ivector/final.ie -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+copying models/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+copying models/vosk-model-small-en-us-0.15/ivector/final.dubm -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+copying models/vosk-model-small-en-us-0.15/ivector/final.mat -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+copying models/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+copying models/vosk-model-small-en-us-0.15/graph/disambig_tid.int -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+copying models/vosk-model-small-en-us-0.15/graph/HCLr.fst -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+copying models/vosk-model-small-en-us-0.15/graph/Gr.fst -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+copying models/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/phones
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_burger
+copying models/turtlebot3_burger/model.sdf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_burger
+copying models/turtlebot3_burger/model-1_4.sdf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_burger
+copying models/turtlebot3_burger/model.config -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_burger
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common
+copying models/turtlebot3_common/model.config -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes
+copying models/turtlebot3_common/meshes/burger_base.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes
+copying models/turtlebot3_common/meshes/waffle_pi_base.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes
+copying models/turtlebot3_common/meshes/lds.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes
+copying models/turtlebot3_common/meshes/tire.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes
+copying models/turtlebot3_common/meshes/r200.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes
+copying models/turtlebot3_common/meshes/waffle_base.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/wheels
+copying models/turtlebot3_common/meshes/wheels/right_tire.stl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/wheels
+copying models/turtlebot3_common/meshes/wheels/left_tire.stl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/wheels
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/bases
+copying models/turtlebot3_common/meshes/bases/waffle_pi_base.stl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/bases
+copying models/turtlebot3_common/meshes/bases/waffle_base.stl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/bases
+copying models/turtlebot3_common/meshes/bases/burger_base.stl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/bases
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/sensors
+copying models/turtlebot3_common/meshes/sensors/astra.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/sensors
+copying models/turtlebot3_common/meshes/sensors/astra.jpg -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/sensors
+copying models/turtlebot3_common/meshes/sensors/r200.jpg -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/sensors
+copying models/turtlebot3_common/meshes/sensors/lds.stl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/sensors
+copying models/turtlebot3_common/meshes/sensors/r200.dae -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/turtlebot3_common/meshes/sensors
+running install_egg_info
+Copying ../../build/task1_quadrotor/task1_quadrotor.egg-info to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor-0.0.0-py3.10.egg-info
+running install_scripts
+Installing command_sender_ui script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+Installing controller script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+Installing odom_gui script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+writing list of installed files to '/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/install.log'

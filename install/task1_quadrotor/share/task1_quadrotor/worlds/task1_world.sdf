@@ -266,7 +266,7 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>1 1</size>
+              <size>50 50</size>    <!-- increased the size of the ground plane to 50x50 -->
             </plane>
           </geometry>
         </collision>
@@ -274,7 +274,7 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>1 1</size>
+              <size>50 50</size>    <!-- increased the size of the ground plane to 50x50 -->
             </plane>
           </geometry>
           <material>
@@ -113985,6 +113985,7 @@
 
       <static>1</static>
     </model>
+
 
   </world>
 </sdf>

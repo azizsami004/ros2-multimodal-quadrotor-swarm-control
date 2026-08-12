@@ -18,6 +18,17 @@ def generate_launch_description():
                 '@nav_msgs/msg/Odometry'
                 '[ignition.msgs.Odometry'
             ),
+            (
+                '/tb3/cmd_vel'
+                '@geometry_msgs/msg/Twist'
+                ']ignition.msgs.Twist'
+            ),
+            (
+                '/tb3/odom'
+                '@nav_msgs/msg/Odometry'
+                '[ignition.msgs.Odometry'
+            ),
+            
         ],
     )
 

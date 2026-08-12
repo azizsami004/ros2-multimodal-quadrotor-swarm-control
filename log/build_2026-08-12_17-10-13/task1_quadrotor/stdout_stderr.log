@@ -1,0 +1,38 @@
+running develop
+running egg_info
+writing task1_quadrotor.egg-info/PKG-INFO
+writing dependency_links to task1_quadrotor.egg-info/dependency_links.txt
+writing entry points to task1_quadrotor.egg-info/entry_points.txt
+writing requirements to task1_quadrotor.egg-info/requires.txt
+writing top-level names to task1_quadrotor.egg-info/top_level.txt
+reading manifest file 'task1_quadrotor.egg-info/SOURCES.txt'
+writing manifest file 'task1_quadrotor.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1-quadrotor.egg-link (link to .)
+Installing command_sender_ui script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+Installing controller script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+Installing odom_gui script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+
+Installed /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor
+running symlink_data
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/resource/task1_quadrotor -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/ament_index/resource_index/packages
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/package.xml -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/launch/gazebo.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/launch/task1.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/launch/control.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/launch/bridge.launch.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/launch
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/worlds/task1_world.sdf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/worlds
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/README -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf/model.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf/mfcc.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/am/final.mdl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/am
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector/splice.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector/final.ie -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector/final.dubm -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector/final.mat -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/disambig_tid.int -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/HCLr.fst -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/Gr.fst -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/phones

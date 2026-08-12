@@ -2,4 +2,6 @@
 command_sender_ui = task1_quadrotor.command_sender_ui:main
 controller = task1_quadrotor.controller:main
 odom_gui = task1_quadrotor.odom_gui:main
+tf_broadcaster = task1_quadrotor.tf_broadcaster:main
+turtlebot_follower = task1_quadrotor.turtlebot_follower:main
 

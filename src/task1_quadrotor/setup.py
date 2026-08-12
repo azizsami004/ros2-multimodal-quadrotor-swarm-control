@@ -39,8 +39,16 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         (os.path.join('share', package_name, 'worlds'), glob('worlds/*.sdf')),
-    ] + install_directory('models/vosk-model-small-en-us-0.15', 'models/vosk-model-small-en-us-0.15'),
-
+        ] + install_directory(
+            'models/vosk-model-small-en-us-0.15',
+            'models/vosk-model-small-en-us-0.15'
+        ) + install_directory(
+            'models/turtlebot3_burger',
+            'models/turtlebot3_burger'
+        ) + install_directory(
+            'models/turtlebot3_common',
+            'models/turtlebot3_common'
+        ),
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='abdul',
@@ -56,7 +64,9 @@ setup(
         'console_scripts': [
             'controller = task1_quadrotor.controller:main',
             'command_sender_ui = task1_quadrotor.command_sender_ui:main',
-            'odom_gui = task1_quadrotor.odom_gui:main'
+            'odom_gui = task1_quadrotor.odom_gui:main',
+            'tf_broadcaster = task1_quadrotor.tf_broadcaster:main',
+            'turtlebot_follower = task1_quadrotor.turtlebot_follower:main',
         ],
     },
 )
