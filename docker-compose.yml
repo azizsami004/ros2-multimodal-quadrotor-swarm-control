@@ -1,0 +1,46 @@
+services:
+
+  task1_quadrotor:
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: task1_quadrotor:latest
+
+    container_name: task1_quadrotor
+
+    network_mode: host
+
+    environment:
+      DISPLAY: ${DISPLAY}
+
+      # Force Qt to use X11 instead of Wayland
+      QT_QPA_PLATFORM: xcb
+
+      # Avoid Qt shared-memory problems in containers
+      QT_X11_NO_MITSHM: "1"
+
+      # Avoid problematic DRI3 rendering path
+      LIBGL_DRI3_DISABLE: "1"
+
+      # Use Mesa CPU rendering
+      LIBGL_ALWAYS_SOFTWARE: "1"
+
+    volumes:
+
+      # X11 GUI access
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+
+      # Existing Gazebo Fuel cache
+      - /home/abdul/.ignition/fuel:/root/.ignition/fuel:ro
+
+    devices:
+
+      # Microphone / sound
+      - /dev/snd:/dev/snd
+
+    ipc: host
+
+    stdin_open: true
+    tty: true
