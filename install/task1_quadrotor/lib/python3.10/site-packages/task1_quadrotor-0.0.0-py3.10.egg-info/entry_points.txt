@@ -1,0 +1,5 @@
+[console_scripts]
+command_sender_ui = task1_quadrotor.command_sender_ui:main
+controller = task1_quadrotor.controller:main
+odom_gui = task1_quadrotor.odom_gui:main
+

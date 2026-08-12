@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating task1_quadrotor.egg-info
+writing task1_quadrotor.egg-info/PKG-INFO
+writing dependency_links to task1_quadrotor.egg-info/dependency_links.txt
+writing entry points to task1_quadrotor.egg-info/entry_points.txt
+writing requirements to task1_quadrotor.egg-info/requires.txt
+writing top-level names to task1_quadrotor.egg-info/top_level.txt
+writing manifest file 'task1_quadrotor.egg-info/SOURCES.txt'
+reading manifest file 'task1_quadrotor.egg-info/SOURCES.txt'
+writing manifest file 'task1_quadrotor.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1-quadrotor.egg-link (link to .)
+
+Installed /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor
+running symlink_data
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/ament_index
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/ament_index/resource_index
+creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/ament_index/resource_index/packages
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/resource/task1_quadrotor -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/ament_index/resource_index/packages
+symbolically linking /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/package.xml -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor

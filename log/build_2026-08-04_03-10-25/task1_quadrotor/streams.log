@@ -1,0 +1,50 @@
+[0.528s] Invoking command in '/home/abdul/Desktop/intp assignment/task_1_ws/src/task1_quadrotor': PYTHONPATH=/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/task1_quadrotor build --build-base /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build install --record /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/install.log --install-scripts $base/lib/task1_quadrotor --single-version-externally-managed install_data
+[0.693s] running egg_info
+[0.693s] writing ../../build/task1_quadrotor/task1_quadrotor.egg-info/PKG-INFO
+[0.693s] writing dependency_links to ../../build/task1_quadrotor/task1_quadrotor.egg-info/dependency_links.txt
+[0.694s] writing entry points to ../../build/task1_quadrotor/task1_quadrotor.egg-info/entry_points.txt
+[0.694s] writing requirements to ../../build/task1_quadrotor/task1_quadrotor.egg-info/requires.txt
+[0.694s] writing top-level names to ../../build/task1_quadrotor/task1_quadrotor.egg-info/top_level.txt
+[0.695s] reading manifest file '../../build/task1_quadrotor/task1_quadrotor.egg-info/SOURCES.txt'
+[0.695s] adding license file 'LICENSE'
+[0.696s] writing manifest file '../../build/task1_quadrotor/task1_quadrotor.egg-info/SOURCES.txt'
+[0.696s] running build
+[0.697s] running build_py
+[0.697s] copying task1_quadrotor/command_sender_ui.py -> /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor
+[0.697s] copying task1_quadrotor/voice_controller.py -> /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor
+[0.697s] running install
+[0.697s] running install_lib
+[0.698s] copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/command_sender_ui.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+[0.698s] copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/voice_controller.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+[0.699s] byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/command_sender_ui.py to command_sender_ui.cpython-310.pyc
+[0.703s] byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/voice_controller.py to voice_controller.cpython-310.pyc
+[0.703s] running install_data
+[0.703s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models
+[0.703s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15
+[0.703s] copying models/vosk-model-small-en-us-0.15/README -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15
+[0.703s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf
+[0.703s] copying models/vosk-model-small-en-us-0.15/conf/model.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf
+[0.704s] copying models/vosk-model-small-en-us-0.15/conf/mfcc.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/conf
+[0.704s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/am
+[0.704s] copying models/vosk-model-small-en-us-0.15/am/final.mdl -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/am
+[0.712s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+[0.712s] copying models/vosk-model-small-en-us-0.15/ivector/splice.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+[0.712s] copying models/vosk-model-small-en-us-0.15/ivector/final.ie -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+[0.715s] copying models/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+[0.716s] copying models/vosk-model-small-en-us-0.15/ivector/final.dubm -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+[0.716s] copying models/vosk-model-small-en-us-0.15/ivector/final.mat -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+[0.716s] copying models/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/ivector
+[0.716s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+[0.716s] copying models/vosk-model-small-en-us-0.15/graph/disambig_tid.int -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+[0.716s] copying models/vosk-model-small-en-us-0.15/graph/HCLr.fst -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+[0.727s] copying models/vosk-model-small-en-us-0.15/graph/Gr.fst -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph
+[0.742s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/phones
+[0.742s] copying models/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor/models/vosk-model-small-en-us-0.15/graph/phones
+[0.743s] running install_egg_info
+[0.743s] removing '/home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor-0.0.0-py3.10.egg-info' (and everything under it)
+[0.743s] Copying ../../build/task1_quadrotor/task1_quadrotor.egg-info to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor-0.0.0-py3.10.egg-info
+[0.744s] running install_scripts
+[0.757s] Installing command_sender_ui script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+[0.757s] Installing controller script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+[0.758s] writing list of installed files to '/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/install.log'
+[0.772s] Invoked command in '/home/abdul/Desktop/intp assignment/task_1_ws/src/task1_quadrotor' returned '0': PYTHONPATH=/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/task1_quadrotor build --build-base /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build install --record /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/install.log --install-scripts $base/lib/task1_quadrotor --single-version-externally-managed install_data

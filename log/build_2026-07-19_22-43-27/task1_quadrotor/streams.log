@@ -1,0 +1,41 @@
+[0.447s] Invoking command in '/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor': PYTHONPATH=/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build
+[0.614s] running develop
+[0.718s] Removing /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1-quadrotor.egg-link (link to .)
+[0.733s] Invoked command in '/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor' returned '0': PYTHONPATH=/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build
+[0.734s] Invoking command in '/home/abdul/Desktop/intp assignment/task_1_ws/src/task1_quadrotor': PYTHONPATH=/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/task1_quadrotor build --build-base /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build install --record /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/install.log --install-scripts $base/lib/task1_quadrotor --single-version-externally-managed install_data --force
+[0.888s] running egg_info
+[0.888s] writing ../../build/task1_quadrotor/task1_quadrotor.egg-info/PKG-INFO
+[0.888s] writing dependency_links to ../../build/task1_quadrotor/task1_quadrotor.egg-info/dependency_links.txt
+[0.889s] writing entry points to ../../build/task1_quadrotor/task1_quadrotor.egg-info/entry_points.txt
+[0.889s] writing requirements to ../../build/task1_quadrotor/task1_quadrotor.egg-info/requires.txt
+[0.889s] writing top-level names to ../../build/task1_quadrotor/task1_quadrotor.egg-info/top_level.txt
+[0.890s] reading manifest file '../../build/task1_quadrotor/task1_quadrotor.egg-info/SOURCES.txt'
+[0.890s] adding license file 'LICENSE'
+[0.891s] writing manifest file '../../build/task1_quadrotor/task1_quadrotor.egg-info/SOURCES.txt'
+[0.891s] running build
+[0.891s] running build_py
+[0.891s] creating /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build
+[0.891s] creating /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib
+[0.891s] creating /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor
+[0.891s] copying task1_quadrotor/controller.py -> /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor
+[0.891s] copying task1_quadrotor/command_sender_ui.py -> /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor
+[0.892s] copying task1_quadrotor/__init__.py -> /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor
+[0.892s] running install
+[0.892s] running install_lib
+[0.892s] creating /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+[0.892s] copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/controller.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+[0.892s] copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/command_sender_ui.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+[0.892s] copying /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build/lib/task1_quadrotor/__init__.py -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor
+[0.893s] byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/controller.py to controller.cpython-310.pyc
+[0.893s] byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/command_sender_ui.py to command_sender_ui.cpython-310.pyc
+[0.893s] byte-compiling /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor/__init__.py to __init__.cpython-310.pyc
+[0.893s] running install_data
+[0.893s] copying resource/task1_quadrotor -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/ament_index/resource_index/packages
+[0.893s] copying package.xml -> /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/share/task1_quadrotor
+[0.894s] running install_egg_info
+[0.897s] Copying ../../build/task1_quadrotor/task1_quadrotor.egg-info to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages/task1_quadrotor-0.0.0-py3.10.egg-info
+[0.897s] running install_scripts
+[0.912s] Installing command_sender script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+[0.912s] Installing command_sender_ui script to /home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/task1_quadrotor
+[0.912s] writing list of installed files to '/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/install.log'
+[0.929s] Invoked command in '/home/abdul/Desktop/intp assignment/task_1_ws/src/task1_quadrotor' returned '0': PYTHONPATH=/home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdul/Desktop/intp assignment/task_1_ws/install/task1_quadrotor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/task1_quadrotor build --build-base /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/build install --record /home/abdul/Desktop/intp assignment/task_1_ws/build/task1_quadrotor/install.log --install-scripts $base/lib/task1_quadrotor --single-version-externally-managed install_data --force
